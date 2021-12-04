@@ -1,0 +1,38 @@
+{% extends "layout/pc.html" %}
+
+{% block title %}登录{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/login/css/pc/main.css" />
+<link rel="stylesheet" href="/static/utils/form/main.css" />
+{% endblock %}
+
+{% block mdv %}
+<script src='/static/login/js/pc/main.js'></script>
+<script src='/static/utils/form/main.js'></script>
+<div class="login">
+    <form action="/login/" method="post" class='form'>
+        <h3 class="title">登录</h3>
+        <div class='input input-text' data-text="用户名" data-name='user' id='user' data-value="{{user}}"> </div>
+        <div class='input input-password' data-text="密码" data-name='pwd' id='pwd'> </div>
+        <p class="warns">{{warn}}</p>
+        <div class="submit" data-text="登录"></div>
+
+        <div class="other">
+            <div class="login-ways">
+                <span>其他</span>
+                <div class="login-qq">
+                    <script type="text/javascript" charset="utf-8" src="http://connect.qq.com/qc_jssdk.js"
+                        data-appid="101978697" data-redirecturi="https://sakuyark.com/login/qq"></script>
+                    <span id="qqLoginBtn"></span>
+                </div>
+            </div>
+            <div class="retrieve">
+                <span>忘记密码？</span>
+                <a href="/login/retrieve">找回密码</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}

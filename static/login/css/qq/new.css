@@ -1,0 +1,51 @@
+.box {
+    width: 40%;
+    margin: 10px auto;
+    border: 5px solid #e9ccd3;
+    border-radius: 30px;
+    padding: 15px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box>div {
+    width: 100%;
+    height: fit-content;
+}
+.box>div p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    width: max-content;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: -45px;
+    height: 30px;
+    background: #f6f6f6 url(/static/images/bg.gif);
+}
+
+#user {}
+
+.submit {
+    height: 40px;
+    width: 70%;
+    background-color: #a7a8bd;
+    border: 0;
+    outline: 0;
+    font-size: 20px
+}
+
+.tip {
+    width: 75%;
+    font-size: 16px;
+    text-align: center;
+    color: red;
+    margin: auto;
+}

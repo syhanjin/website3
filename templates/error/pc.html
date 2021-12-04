@@ -1,0 +1,56 @@
+{% extends "layout/pc.html" %}
+
+{% block title %}错误页面{% endblock %}
+
+{% block css %}
+<style>
+	.error {
+		height: 100%;
+		width: 100%;
+		text-align: center;
+	}
+	.error p {
+		margin: auto;
+		font-size: 72px;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+	.error .sign {
+		font-size: 16px;
+	}
+	.error .sign em {
+		font-style: normal;
+	}
+	.error .small {
+		font-size: 24px;
+		color: grey;
+	}
+</style>
+{% endblock %}
+
+{% block mdv %}
+<div class="error">
+	<!-- <img src="{{errorimg}}" /> -->
+	<p>
+		{{error|safe}}
+	</p>
+	<p class="small">
+		这里是主站所带有的错误页面，如果您访问的是分站（例如/c18），请点击浏览器上的←按钮
+	</p>
+	<p class="small">
+		Here is the error page of the main station. If you are visiting a sub station (such as /c18), please click the ← button on the browser
+	</p>
+	<!--<p class="sign">即将返回主页(<em>3</em>)</p>
+	<script>
+	var t=3;
+	setInterval(function(){
+	t--;
+	$(".error p em").text(t);
+	if(t==0){
+	window.location.href="/";
+	}
+	},1000);
+	</script>-->
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% import 'macro/pc.html' as macro with context %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Sakuyark{% endblock %}</title>
+    <!-- <title></title> -->
+    <link rel=icon href="/static/images/favicon.ico" />
+    {{macro.js_css()}}
+    {% block css %} {% endblock %}
+</head>
+
+<body>
+    <!-- <script src="/static/utils/cursor-effect.js"></script> -->
+    {{macro.nav(icon='/static/images/icon.jpg')}}
+    <div class="container">
+        {% block mdv %} {% endblock %}
+    </div>
+    <div class="tail">
+        <div class="links">
+            <p>
+                友情链接
+            </p>
+            <div>
+                {% for i in data['tail_links'] %}
+                <a target="_Blank" href="{{i['href']}}">{{i['title']}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="">
+            <a target="_blank" href="/contactus">联系我们</a>
+        </div>
+        ©2020 sakuyark.com 版权所有
+        <a href="http://www.beian.miit.gov.cn">湘ICP备2021010731号</a>
+    </div>
+    <div class="templates">
+        {% block templates %} {% endblock %}
+    </div>
+</body>
+
+</html>

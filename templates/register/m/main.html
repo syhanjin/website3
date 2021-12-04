@@ -1,0 +1,33 @@
+{% extends "layout/m.html" %}
+
+{% block title %}注册{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/register/css/m/main.css" />
+<link rel="stylesheet" href="/static/utils/form/main.css" />
+{% endblock %}
+
+{% block mdv %}
+<script src="/static/register/js/main.js"></script>
+<script src="/static/utils/form/main.js"></script>
+<div class="register">
+    <form action="/register/" method="post" class="form">
+        <div class="input input-text" data-text="用户名" data-name="user" id='user'></div>
+        
+        <div class="input input-password" data-text="密码" data-name="pwd1" id="pwd1"></div>
+        <span class="tips tip">为了您的账号安全，建议包含数字和大小写字母</span>
+
+        <div class="input input-password" data-text="确认密码" data-name="pwd2" id="pwd2"></div>
+
+        <div class="input input-text" data-text="邮箱" data-name="mail" id="mail"></div>
+
+        <div class="input verify" data-name="code" id="code" data-action="getcode();"></div>
+
+        <p class="rg-warn">
+            {{warn}}
+        </p>
+        <input class="submit" type="submit" value="注册" disabled />
+    </form>
+
+</div>
+{% endblock %}
